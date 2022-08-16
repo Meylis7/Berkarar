@@ -1,0 +1,150 @@
+// Post =========================
+.post {
+    padding: 60px 0 80px;
+
+    &_box {
+        display: flex;
+        align-items: center;
+    }
+
+    &_info {
+        width: calc(100% - 560px);
+
+        &-title {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 1.5;
+            color: $gray;
+            border-bottom: 1px solid $gray;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+        }
+
+        &-cnt {
+            padding: 10px 20px;
+            background: $yellow;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.3;
+            text-transform: uppercase;
+            color: $gray;
+            margin-right: 30px;
+
+            display: flex;
+            align-items: center;
+            @include transition;
+
+            span {
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        @include transition;
+                    }
+                }
+            }
+
+            &:hover {
+                color: $yellow;
+                background: $gray;
+
+                span {
+                    path {
+                        // stroke: $yellow;
+                        fill: $yellow;
+                    }
+
+                    rect {
+                        stroke: $yellow;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &-txt {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.5;
+            text-transform: capitalize;
+            color: $gray;
+
+        }
+    }
+
+    &_photo {
+        width: 500px;
+        height: 500px;
+        margin-left: 60px;
+
+        img {
+            @include ImgCon;
+        }
+    }
+
+    &_link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+
+        a {
+            display: flex;
+            align-items: center;
+            padding: 10px 25px;
+            background: $yellow;
+            color: $gray;
+            @include transition;
+            border-radius: 5px;
+
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+
+            &:hover {
+                color: $yellow;
+                background: $gray;
+
+                span {
+                    path {
+                        fill: $yellow;
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                margin-left: 10px;
+                width: 20px;
+                height: 20px;
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        @include transition;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// Post end =====================

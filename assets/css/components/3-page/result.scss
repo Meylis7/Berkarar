@@ -1,0 +1,40 @@
+// Result ====================
+.result {
+    padding-bottom: 80px;
+
+    .menu {
+        &_search {
+            &-title {
+                color: $gray;
+            }
+
+            &-txt {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 25px;
+                color: $gray;
+            }
+
+            &-input {
+                input {
+                    border: 1px solid $gray;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    &.page {
+        background: #fff;
+
+        .rest {
+            &_item {
+                width: calc(25% - 28px);
+                margin: 15px 12px;
+            }
+        }
+    }
+}
+
+// Result end ================

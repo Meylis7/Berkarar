@@ -1,0 +1,74 @@
+// Breadcrumb ========================
+.crumb {
+    padding: 40px 0 60px;
+
+    &_row {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &_title {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        margin-right: 35px;
+
+        @include transition;
+
+        &:last-child {
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            @include transformY;
+            width: 20px;
+            height: 16px;
+            background: url("../images/svg/crumb-arrow.svg") no-repeat center;
+        }
+
+        &:hover {
+            color: $yellow;
+
+            span {
+                path {
+                    fill: $yellow;
+                    stroke: $yellow;
+                }
+            }
+
+            &:last-child {
+                color: initial;
+            }
+        }
+
+        span {
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin-right: 10px;
+
+            svg {
+                @include ImgCon;
+
+                path {
+                    @include transition;
+                }
+            }
+        }
+    }
+}
+
+// Breadcrumb end ====================

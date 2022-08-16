@@ -1,0 +1,233 @@
+// Contact ===========================
+.contact {
+    position: relative;
+    margin-top: -200px;
+    padding-bottom: 80px;
+
+    &_form {
+        display: flex;
+        border-radius: 5px;
+        overflow: hidden;
+        max-width: 1275px;
+        margin: 0 auto 80px auto;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.24);
+    }
+
+    &_box {
+        padding: 50px 45px;
+        width: calc(60% - 90px);
+        display: flex;
+        flex-wrap: wrap;
+
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 80px;
+            width: 100%;
+
+            span {
+                display: block;
+                width: 35px;
+                height: 35px;
+
+                svg {
+                    @include ImgCon;
+                }
+            }
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+            color: $gray;
+        }
+    }
+
+    &_input {
+        width: calc(50% - 50px);
+        margin: 30px 25px;
+
+
+        input {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: $gray;
+            border-bottom: 2px solid rgba(23, 23, 23, 0.5);
+            padding: 10px 0;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+
+            &::placeholder {
+                color: rgba(23, 23, 23, 0.5);
+            }
+        }
+    }
+
+    &_message {
+        width: 100%;
+        margin: 30px 25px;
+
+        textarea {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: $gray;
+            border-bottom: 2px solid rgba(23, 23, 23, 0.5);
+            padding: 10px 0;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            resize: none;
+            min-height: 100px;
+
+            &::placeholder {
+                color: rgba(23, 23, 23, 0.5);
+            }
+        }
+    }
+
+    &_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        button {
+            display: flex;
+            align-items: center;
+
+            background: $yellow;
+            border-radius: 10px;
+            padding: 10px 25px;
+
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: $gray;
+            cursor: pointer;
+            @include transition;
+
+            &:hover {
+                color: $yellow;
+                background: $gray;
+
+                span {
+                    path {
+                        fill: $yellow;
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        @include transition;
+                    }
+                }
+            }
+        }
+    }
+
+    &_info {
+        width: calc(40% - 90px);
+        padding: 50px 45px;
+        background: $gray;
+        position: relative;
+
+        &-title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+            margin-bottom: 50px;
+        }
+
+        &-txt {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.1;
+            color: #FFFFFF;
+            margin-bottom: 40px;
+
+            display: flex;
+            align-items: center;
+
+            span {
+                width: 24px;
+                height: 24px;
+                display: block;
+                margin-right: 10px;
+
+                svg {
+                    @include ImgCon;
+                }
+            }
+        }
+
+        &-media {
+            display: flex;
+            align-items: center;
+
+            a {
+                display: block;
+                margin-right: 25px;
+                width: 30px;
+                height: 30px;
+
+                &:hover {
+                    path {
+                        fill: $yellow;
+                    }
+                }
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        @include transition;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 450px;
+            height: 300px;
+
+            svg {
+                @include ImgCov;
+            }
+        }
+    }
+
+    &_map {
+        max-width: 1275px;
+        height: 670px;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+
+        iframe {
+            @include ImgCov;
+        }
+    }
+}
+
+// Contact end =======================

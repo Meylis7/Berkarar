@@ -1,0 +1,224 @@
+// Intro ==============================
+.intro {
+    position: relative;
+    display: block;
+    padding: 40px 0;
+    // background: url("../images/bg.png") no-repeat center;
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.9) 0.01%, rgba(0, 0, 0, 0.4) 80%), url("../images/bg.png") no-repeat center;
+
+    background-size: cover;
+    min-height: 800px;
+
+    &_wrap {
+        position: relative;
+    }
+
+    .breadcrumb {
+        display: flex;
+        align-items: center;
+        // position: absolute;
+        // top: 40px;
+        // left: 0;
+
+        &_title {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            margin-right: 35px;
+            color: #fff;
+
+            @include transition;
+
+            &:last-child {
+                margin-right: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: -25px;
+                @include transformY;
+                width: 20px;
+                height: 16px;
+                background: url("../images/svg/crumb-white-arrow.svg") no-repeat center;
+            }
+
+            &:hover {
+                color: $yellow;
+
+                span {
+                    path {
+                        fill: $yellow;
+                        stroke: $yellow;
+                    }
+                }
+
+                &:last-child {
+                    color: #fff;
+                }
+            }
+
+            span {
+                width: 20px;
+                height: 20px;
+                display: block;
+                margin-right: 10px;
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        @include transition;
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        height: 800px;
+        max-width: 700px;
+
+        &.intro_contact {
+            max-width: 1275px;
+            margin: 0 auto;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+
+        &-txt {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 35px;
+            color: #FFFFFF;
+            margin-bottom: 24px;
+        }
+
+        &-link {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 50px;
+
+            a {
+                background: $yellow;
+                color: $gray;
+                padding: 10px 25px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                @include transition;
+
+                &:hover {
+                    color: $yellow;
+                    background: $gray;
+
+                    span {
+                        path {
+                            fill: $yellow;
+                        }
+                    }
+                }
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    margin-left: 15px;
+
+                    svg {
+                        @include ImgCon;
+
+                        path {
+                            @include transition;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// Intro end ==========================
+
+// About ==============================
+.about {
+    padding: 80px 0;
+
+    &_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:nth-of-type(even) {
+            flex-direction: row-reverse;
+
+
+        }
+
+        &-photo {
+            width: calc(50% - 80px);
+            height: 600px;
+
+            img {
+                @include ImgCon;
+            }
+        }
+
+        &-info {
+            width: calc(50% - 80px);
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+            color: $gray;
+            margin-bottom: 30px;
+        }
+
+        &-txt {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 35px;
+            color: $gray;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// About end ==========================
