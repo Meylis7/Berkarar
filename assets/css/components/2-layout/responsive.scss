@@ -1,14 +1,176 @@
-// 1580 ===========================
+// 1665 ============================================
 @include xlg-xxlg {
 
+    // Nav ============================
+    .nav {
+        &_list {
+            li {
+                &:nth-last-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Nav end ========================
 }
 
-@include lg-xxlg {}
+// 1500 ======================================
+@include lg-xxlg {
 
-@include lg-xlg {}
+    // Header ================
+    .header {
+        &_item {
+            &-link {
+                display: none;
+            }
+        }
+    }
 
-@include lg-lg {}
+    // Header end ============
 
-@include md-xsm {}
+    // Nav end ================
+    .nav {
+        display: none;
+    }
+
+    // Nav end ================
+}
+
+// 1400 ============================================
+@include lg-xlg {
+
+    // Shops ================
+    .shops {
+        &_block {
+            justify-content: center;
+        }
+
+        &_item {
+            width: calc(45% - 10px);
+        }
+    }
+
+    // Shops end ============
+}
+
+// 1200 =======================================
+@include lg-lg {
+
+    // Restaurants ================
+    .rest {
+        &_block {
+            justify-content: center;
+        }
+
+        &_item {
+            width: calc(50% - 54px);
+
+            &-photo {
+                height: 190px;
+            }
+        }
+    }
+
+    // Restaurants end ============
+
+    // Footer ================
+    .footer {
+        &_box {
+            flex-wrap: wrap;
+        }
+
+        &_col {
+            width: calc(33.33% - 50px);
+            margin-right: 50px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    // Footer end ============
+
+    // Copyright ================
+    .copy {
+        &_row {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        &_txt {
+            margin-bottom: 20px;
+        }
+
+        &_info {
+            flex-direction: column;
+            align-items: unset;
+
+            &-item {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // Copyright end ============
+}
+
+// 900 ========================================
+@include md-xsm {
+
+    // Hero ======================
+    .hero {
+        &_item {
+            &-photo {
+                height: 500px;
+            }
+        }
+    }
+
+    // Hero end ==================
+
+    // Shops ======================
+    .shops {
+        &_item {
+            width: calc(50% - 16px);
+            margin: 10px 8px;
+            height: 400px;
+
+            &-name {
+                font-size: 18px;
+            }
+
+            &-floor {
+                font-size: 28px;
+            }
+        }
+    }
+
+    // Shops end ==================
+
+    // Footer ================
+    .footer {
+        &_box {
+            flex-wrap: wrap;
+        }
+
+        &_col {
+            width: calc(50% - 50px);
+            margin-right: 50px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    // Footer end ============
+
+}
 
 @include md-sm {}

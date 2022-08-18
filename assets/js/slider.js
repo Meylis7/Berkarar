@@ -44,6 +44,22 @@ $(".movie_slider").slick({
     swipeToSlide: true,
     waitForAnimate: false,
     draggable: true,
+
+    responsive: [
+        {
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+
+    ]
 });
 
 

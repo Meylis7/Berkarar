@@ -10,6 +10,9 @@ let header = document.querySelector('.header');
 let nav = document.querySelector('.nav');
 let body = document.querySelector('body');
 
+let lang_current = document.querySelector('.lang_current');
+let lang_box = document.querySelector('.lang_box');
+
 
 // let info_icon = document.querySelectorAll('.info_icon');
 // let pop_info = document.querySelectorAll('.pop_info');
@@ -43,9 +46,9 @@ window.onclick = function (e) {
     // }
     // );
 
-    // if (menu.classList.contains('active') && !e.target.closest('.burger')) {
-    //     menu.classList.remove('active')
-    // }
+    if (lang_box.classList.contains('active') && !e.target.closest('.lang_current')) {
+        lang_box.classList.remove('active')
+    }
 
 
 }
@@ -73,6 +76,14 @@ if (search != undefined) {
             header.classList.add('active');
             nav.classList.add('active');
             body.classList.toggle('active');
+        })
+    });
+}
+
+if (lang_current != undefined) {
+    lang_current.addEventListener('click', function () {
+        sleep(2).then(() => {
+            lang_box.classList.toggle('active');
         })
     });
 }

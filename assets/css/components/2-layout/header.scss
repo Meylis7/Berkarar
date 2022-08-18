@@ -156,13 +156,6 @@
             line-height: 17px;
             color: $black;
 
-            &:hover~.lang_box {
-                display: block;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                z-index: 10;
-            }
         }
 
         &_flag {
@@ -187,10 +180,48 @@
 
         &_box {
             display: none;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
 
-            &:hover {
+            position: absolute;
+            top: calc(100% + 20px);
+            left: 0;
+            z-index: 10;
+
+            &.active {
                 display: block;
-                position: absolute;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: $gray;
+                padding: 12px 10px;
+                @include transition;
+
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                color: #fff;
+
+                span {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+
+                    img {
+                        @include ImgCon;
+                    }
+                }
+
+                &:hover {
+                    background: #fff;
+                    color: $gray;
+                }
             }
         }
     }

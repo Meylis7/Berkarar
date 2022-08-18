@@ -77,31 +77,31 @@
 
 
 @mixin md-xsm {
-    @media (max-width: 650px) {
+    @media (max-width: 900px) {
         @content;
     }
 }
 
 @mixin lg-lg {
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         @content;
     }
 }
 
 @mixin lg-xlg {
-    @media (max-width: 1023px) {
+    @media (max-width: 1400px) {
         @content;
     }
 }
 
 @mixin lg-xxlg {
-    @media (max-width: 1270px) {
+    @media (max-width: 1500px) {
         @content;
     }
 }
 
 @mixin xlg-xxlg {
-    @media (max-width: 1580px) {
+    @media (max-width: 1665px) {
         @content;
     }
 }
