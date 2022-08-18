@@ -138,6 +138,7 @@
     &_block {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         margin: -5px auto;
         max-width: 1440px;
 
@@ -184,10 +185,12 @@
 
     &_item {
         width: calc(33.33% - 10px);
+        max-width: 480px;
+        height: 480px;
+
         margin: 5px;
         position: relative;
         display: block;
-        height: 480px;
 
         &:hover {
             .shops_item {
@@ -382,7 +385,11 @@
     padding: 80px 0;
     background: url("../images/movie-bg.png") no-repeat center;
     background-size: cover;
-    animation: movie-bg 10s infinite ease-in-out;
+    animation: movie-bg 40s infinite ease-in-out;
+
+    &_wrap {
+        overflow: hidden;
+    }
 
     &_row {
         display: flex;
@@ -667,11 +674,13 @@
     &_box {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         margin: -15px -12px;
     }
 
     &_item {
         width: calc(33.33% - 54px);
+        max-width: 400px;
         margin: 25px;
         border: 2px solid rgba(41, 41, 41, 0.5);
         border-radius: 5px 5px 0px 0px;

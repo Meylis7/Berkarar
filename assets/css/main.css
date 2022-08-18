@@ -288,6 +288,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: block;
   position: relative;
   width: 390px;
+  height: 50px;
   cursor: pointer;
 }
 .header .logo img {
@@ -401,7 +402,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .nav.active {
   position: fixed;
-  top: 137px;
+  top: 131px;
   left: 0;
   width: 100%;
   z-index: 100;
@@ -530,14 +531,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   top: -150%;
   left: 0;
   width: 100%;
-  height: calc(100% - 218px);
+  height: calc(100% - 210px);
   background: url("../images/menu-bg.png") no-repeat center;
   background-size: cover;
   z-index: 100;
   overflow-y: auto;
 }
 .menu.active {
-  top: 218px;
+  top: 210px;
   -webkit-animation: header 0.3s linear;
           animation: header 0.3s linear;
 }
@@ -1266,6 +1267,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: -5px auto;
   max-width: 1440px;
 }
@@ -1312,10 +1316,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .shops_item {
   width: calc(33.33% - 10px);
+  max-width: 480px;
+  height: 480px;
   margin: 5px;
   position: relative;
   display: block;
-  height: 480px;
 }
 .shops_item:hover .shops_item-info {
   max-height: 100%;
@@ -1481,8 +1486,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 80px 0;
   background: url("../images/movie-bg.png") no-repeat center;
   background-size: cover;
-  -webkit-animation: movie-bg 10s infinite ease-in-out;
-          animation: movie-bg 10s infinite ease-in-out;
+  -webkit-animation: movie-bg 40s infinite ease-in-out;
+          animation: movie-bg 40s infinite ease-in-out;
+}
+.movie_wrap {
+  overflow: hidden;
 }
 .movie_row {
   display: -webkit-box;
@@ -1781,10 +1789,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: -15px -12px;
 }
 .rest_item {
   width: calc(33.33% - 54px);
+  max-width: 400px;
   margin: 25px;
   border: 2px solid rgba(41, 41, 41, 0.5);
   border-radius: 5px 5px 0px 0px;
@@ -3219,6 +3231,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 @media (max-width: 1500px) {
+  .auto_container {
+    padding: 0 30px;
+  }
+
+  .m-rl {
+    margin: 0 25px;
+  }
+
+  .header_item-link {
+    padding: 15px;
+  }
+  .header .lang_current {
+    padding: 15px;
+  }
+
+  .nav.active {
+    top: 133px;
+  }
+}
+@media (max-width: 1400px) {
   .header_item-link {
     display: none;
   }
@@ -3226,8 +3258,29 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .nav {
     display: none;
   }
-}
-@media (max-width: 1400px) {
+
+  .menu.active {
+    top: 130px;
+    height: calc(100% - 130px);
+  }
+  .menu_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu_col {
+    width: calc(33.33% - 50px);
+    margin: 0 50px 30px 0;
+  }
+  .menu_col::after {
+    right: -10px;
+  }
+  .menu_col:nth-child(3) {
+    margin-right: 0;
+  }
+  .menu_col:nth-child(3)::after {
+    display: none;
+  }
+
   .shops_block {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -3235,6 +3288,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .shops_item {
     width: calc(45% - 10px);
+    height: 440px;
+  }
+
+  .footer_box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer_col {
+    width: calc(33.33% - 34px);
+    margin: 0 50px 30px 0;
+  }
+  .footer_col:nth-child(3) {
+    margin-right: 0;
+  }
+  .footer_col::after {
+    display: none;
   }
 }
 @media (max-width: 1200px) {
@@ -3248,18 +3317,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .rest_item-photo {
     height: 190px;
-  }
-
-  .footer_box {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .footer_col {
-    width: calc(33.33% - 50px);
-    margin-right: 50px;
-  }
-  .footer_col::after {
-    display: none;
   }
 
   .copy_row {
@@ -3290,11 +3347,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin-bottom: 0;
   }
 }
-@media (max-width: 900px) {
-  .hero_item-photo {
-    height: 500px;
-  }
-
+@media (max-width: 1000px) {
   .shops_item {
     width: calc(50% - 16px);
     margin: 10px 8px;
@@ -3306,14 +3359,109 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .shops_item-floor {
     font-size: 28px;
   }
+}
+@media (max-width: 900px) {
+  .menu_search {
+    padding-top: 30px;
+  }
+  .menu_search-title {
+    font-size: 32px;
+  }
+  .menu_search-input input {
+    padding: 15px 20px;
+  }
+  .menu_search-btn {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+  .menu_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .menu_info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    margin-top: 15px;
+  }
+  .menu_info a {
+    margin-bottom: 15px;
+  }
+  .menu_col {
+    width: calc(50% - 20px);
+    margin: 0 40px 30px 0;
+  }
+  .menu_col::after {
+    right: -10px;
+  }
+  .menu_col:nth-child(3) {
+    margin-right: 40px;
+  }
+  .menu_col:nth-child(3)::after {
+    display: block;
+  }
+  .menu_col:nth-child(2), .menu_col:nth-child(4) {
+    margin-right: 0;
+  }
+  .menu_col:nth-child(2)::after, .menu_col:nth-child(4)::after {
+    display: none;
+  }
+
+  .hero_item-link {
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    -moz-ransform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  .hero_slider .slick-prev, .hero_slider .slick-next {
+    display: none !important;
+  }
+  .hero .slider__counter {
+    display: none;
+  }
+
+  .shops_item {
+    width: calc(50% - 16px);
+    margin: 10px 8px;
+    height: 370px;
+  }
+  .shops_item-name {
+    font-size: 16px;
+    padding: 15px 10px;
+  }
+  .shops_item-floor {
+    font-size: 24px;
+    padding: 12px 25px;
+  }
+  .shops_item-content-txt {
+    font-size: 18px;
+  }
 
   .footer_box {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .footer_col {
-    width: calc(50% - 50px);
-    margin-right: 50px;
+    width: calc(50% - 20px);
+    margin-right: 40px;
+  }
+  .footer_col:nth-child(3) {
+    margin-right: 40px;
+  }
+  .footer_col:nth-child(2), .footer_col:nth-child(4) {
+    margin-right: 0;
   }
   .footer_col::after {
     display: none;

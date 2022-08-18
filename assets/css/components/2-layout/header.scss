@@ -131,6 +131,7 @@
         display: block;
         position: relative;
         width: 390px;
+        height: 50px;
         cursor: pointer;
 
         img {
@@ -243,7 +244,7 @@
 
     &.active {
         position: fixed;
-        top: 137px;
+        top: 131px;
         left: 0;
         width: 100%;
         // height: 100%;
@@ -385,14 +386,14 @@
     top: -150%;
     left: 0;
     width: 100%;
-    height: calc(100% - 218px);
+    height: calc(100% - 210px);
     background: url("../images/menu-bg.png") no-repeat center;
     background-size: cover;
     z-index: 100;
     overflow-y: auto;
 
     &.active {
-        top: 218px;
+        top: 210px;
         animation: header .3s linear;
 
     }

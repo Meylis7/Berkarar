@@ -17,6 +17,43 @@
 
 // 1500 ======================================
 @include lg-xxlg {
+    .auto_container {
+        padding: 0 30px;
+    }
+
+    .m-rl {
+        margin: 0 25px;
+    }
+
+    // Header ================
+    .header {
+        &_item {
+            &-link {
+                padding: 15px;
+            }
+        }
+
+        .lang {
+            &_current {
+                padding: 15px;
+            }
+        }
+    }
+
+    // Header end ============
+
+    // Nav end ================
+    .nav {
+        &.active {
+            top: 133px;
+        }
+    }
+
+    // Nav end ================
+}
+
+// 1400 ============================================
+@include lg-xlg {
 
     // Header ================
     .header {
@@ -35,10 +72,37 @@
     }
 
     // Nav end ================
-}
 
-// 1400 ============================================
-@include lg-xlg {
+    // Menu ====================
+    .menu {
+        &.active {
+            top: 130px;
+            height: calc(100% - 130px);
+        }
+
+        &_box {
+            flex-wrap: wrap;
+        }
+
+        &_col {
+            width: calc(33.33% - 50px);
+            margin: 0 50px 30px 0;
+
+            &::after {
+                right: -10px;
+            }
+
+            &:nth-child(3) {
+                margin-right: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Menu end ================
 
     // Shops ================
     .shops {
@@ -48,10 +112,34 @@
 
         &_item {
             width: calc(45% - 10px);
+            height: 440px;
         }
     }
 
     // Shops end ============
+
+    // Footer ================
+    .footer {
+        &_box {
+            flex-wrap: wrap;
+        }
+
+        &_col {
+            width: calc(33.33% - 34px);
+            // margin-right: 50px;
+            margin: 0 50px 30px 0;
+
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    // Footer end ============
 }
 
 // 1200 =======================================
@@ -73,24 +161,6 @@
     }
 
     // Restaurants end ============
-
-    // Footer ================
-    .footer {
-        &_box {
-            flex-wrap: wrap;
-        }
-
-        &_col {
-            width: calc(33.33% - 50px);
-            margin-right: 50px;
-
-            &::after {
-                display: none;
-            }
-        }
-    }
-
-    // Footer end ============
 
     // Copyright ================
     .copy {
@@ -120,19 +190,8 @@
     // Copyright end ============
 }
 
-// 900 ========================================
-@include md-xsm {
-
-    // Hero ======================
-    .hero {
-        &_item {
-            &-photo {
-                height: 500px;
-            }
-        }
-    }
-
-    // Hero end ==================
+// 1000 =======================================
+@include md-xlg {
 
     // Shops ======================
     .shops {
@@ -152,6 +211,133 @@
     }
 
     // Shops end ==================
+}
+
+
+// 900 ========================================
+@include md-lg {
+
+    // Menu ====================
+    .menu {
+
+        &_search {
+            padding-top: 30px;
+
+            &-title {
+                font-size: 32px;
+            }
+
+            &-input {
+                input {
+                    padding: 15px 20px;
+                }
+            }
+
+            &-btn {
+                padding: 15px 40px;
+                font-size: 16px;
+            }
+        }
+
+        &_row {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        &_info {
+            flex-direction: column;
+            align-items: unset;
+            margin-top: 15px;
+
+            a {
+                margin-bottom: 15px;
+            }
+        }
+
+        &_col {
+            width: calc(50% - 20px);
+            margin: 0 40px 30px 0;
+
+            &::after {
+                right: -10px;
+            }
+
+            &:nth-child(3) {
+                margin-right: 40px;
+
+                &::after {
+                    display: block;
+                }
+            }
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                margin-right: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Menu end ================
+
+    // Hero ======================
+    .hero {
+        &_item {
+            &-link {
+                right: unset;
+                left: 50%;
+                @include transformX;
+            }
+        }
+
+        &_slider {
+            .slick {
+
+                &-prev,
+                &-next {
+                    display: none !important;
+                }
+            }
+        }
+
+        .slider {
+            &__counter {
+                display: none;
+            }
+        }
+    }
+
+    // Hero end ==================
+
+    // Shops ======================
+    .shops {
+        &_item {
+            width: calc(50% - 16px);
+            margin: 10px 8px;
+            height: 370px;
+
+            &-name {
+                font-size: 16px;
+                padding: 15px 10px;
+            }
+
+            &-floor {
+                font-size: 24px;
+                padding: 12px 25px;
+            }
+
+            &-content {
+                &-txt {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    // Shops end ==================
 
     // Footer ================
     .footer {
@@ -160,8 +346,17 @@
         }
 
         &_col {
-            width: calc(50% - 50px);
-            margin-right: 50px;
+            width: calc(50% - 20px);
+            margin-right: 40px;
+
+            &:nth-child(3) {
+                margin-right: 40px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                margin-right: 0;
+            }
 
             &::after {
                 display: none;
@@ -173,4 +368,12 @@
 
 }
 
-@include md-sm {}
+// 700 ==============================================
+@include md-sm {
+    // Shops =================
+    .shops {
+        
+    }
+
+    // Shops end =============
+}
