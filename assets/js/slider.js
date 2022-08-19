@@ -58,6 +58,12 @@ $(".movie_slider").slick({
                 slidesToShow: 2,
             }
         },
+        {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
 
     ]
 });

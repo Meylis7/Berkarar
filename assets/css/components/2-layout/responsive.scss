@@ -286,6 +286,10 @@
     // Hero ======================
     .hero {
         &_item {
+            &-photo {
+                height: 600px;
+            }
+
             &-link {
                 right: unset;
                 left: 50%;
@@ -370,10 +374,87 @@
 
 // 700 ==============================================
 @include md-sm {
+
     // Shops =================
     .shops {
-        
+        &_tab {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &-link {
+                width: calc(50% - 60px);
+                max-width: 160px;
+                margin: 10px 5px;
+                text-align: center;
+            }
+        }
+
+        &_item {
+            width: 100%;
+            margin: 10px 0;
+        }
     }
 
     // Shops end =============
+
+    // Movie ==================
+    .movie {
+        &_row {
+            flex-direction: column;
+        }
+
+        &_link {
+            font-size: 24px;
+            margin: 40px 0;
+        }
+
+        &_item {
+            &-info {
+                margin: 0 auto;
+            }
+
+            &-link {
+                max-width: 350px;
+                margin: 60px auto 0;
+            }
+
+            &-photo {
+                height: 520px;
+
+                img {
+                    @include ImgCon;
+                }
+            }
+        }
+
+        &_all {
+            display: none;
+        }
+    }
+
+    // Movie end ==============
+
+    // Restaurants ==================
+    .rest {
+        &_tabs {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &-link {
+                width: calc(50% - 60px);
+                max-width: 160px;
+                margin: 10px 5px;
+                text-align: center;
+            }
+        }
+
+        &_item {
+            width: 100%;
+            margin: 15px 0;
+        }
+    }
+
+    // Restaurants end ==============
+
+
 }

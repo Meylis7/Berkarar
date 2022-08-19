@@ -3416,6 +3416,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: none;
   }
 
+  .hero_item-photo {
+    height: 600px;
+  }
   .hero_item-link {
     right: unset;
     left: 50%;
@@ -3465,5 +3468,72 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .footer_col::after {
     display: none;
+  }
+}
+@media (max-width: 700px) {
+  .shops_tab {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .shops_tab-link {
+    width: calc(50% - 60px);
+    max-width: 160px;
+    margin: 10px 5px;
+    text-align: center;
+  }
+  .shops_item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .movie_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .movie_link {
+    font-size: 24px;
+    margin: 40px 0;
+  }
+  .movie_item-info {
+    margin: 0 auto;
+  }
+  .movie_item-link {
+    max-width: 350px;
+    margin: 60px auto 0;
+  }
+  .movie_item-photo {
+    height: 520px;
+  }
+  .movie_item-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -o-object-fit: contain;
+  }
+  .movie_all {
+    display: none;
+  }
+
+  .rest_tabs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .rest_tabs-link {
+    width: calc(50% - 60px);
+    max-width: 160px;
+    margin: 10px 5px;
+    text-align: center;
+  }
+  .rest_item {
+    width: 100%;
+    margin: 15px 0;
   }
 }
