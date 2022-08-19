@@ -25,7 +25,7 @@ $(".hero_slider").slick({
 });
 
 $(".movie_slider").slick({
-    dots: false,
+    dots: true,
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: true,

@@ -140,6 +140,62 @@
     }
 
     // Footer end ============
+
+    // Intro ================
+    .intro {
+        &_info {
+            &-title {
+                font-size: 44px;
+                line-height: 1.5;
+            }
+
+            &-txt {
+                font-size: 20px;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    // Intro end ============
+
+    // About =================
+    .about {
+        &_item {
+            &-photo {
+                width: calc(50% - 25px);
+            }
+
+            &-info {
+                width: calc(50% - 25px);
+            }
+
+            &-title {
+                font-size: 40px;
+            }
+
+            &-txt {
+                font-size: 22px;
+            }
+        }
+    }
+
+    // About end =============
+
+    // Bills =================
+    .bill {
+        &_aside {
+            padding: 25px;
+            margin-right: 25px;
+        }
+
+        // &_info {
+        //     width: calc(100% -);
+        // }
+    }
+
+    // Bills end =============
+
+
 }
 
 // 1200 =======================================
@@ -188,6 +244,26 @@
     }
 
     // Copyright end ============
+
+    // Bills =================
+    .bill {
+        &_box {
+            flex-direction: column;
+        }
+
+        &_aside {
+            padding: 30px;
+            margin-right: 0;
+        }
+
+        &_info {
+            margin-top: 50px;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    // Bills end =============
 }
 
 // 1000 =======================================
@@ -211,6 +287,43 @@
     }
 
     // Shops end ==================
+
+    // Intro ======================
+    .intro {
+        min-height: 660px;
+
+        &_info {
+            min-height: 660px;
+            max-width: 100%;
+        }
+    }
+
+    // Intro end ==================
+
+    // About ======================
+    .about {
+        &_item {
+            flex-direction: column-reverse;
+
+            &:nth-of-type(even) {
+                flex-direction: column-reverse;
+            }
+
+            &-photo {
+                width: 100%;
+                height: 500px;
+            }
+
+            &-info {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    // About end ==================
+
+
 }
 
 
@@ -456,5 +569,60 @@
 
     // Restaurants end ==============
 
+    // About ======================
+    .about {
+        &_item {
+            &-photo {
+                height: 370px;
+            }
+
+            &-info {
+                &-title {
+                    font-size: 34px;
+                    margin-bottom: 15px;
+                }
+
+                &-txt {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    // About end ==================
+
+    // Bills =================
+    .bill {
+        &_aside {
+            width: calc(100% - 60px);
+
+            &-title {
+                font-size: 20px;
+                padding-bottom: 30px;
+
+                &.active {
+                    &::after {
+                        bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        &_item {
+            flex-direction: column;
+            align-items: unset;
+
+            &>div {
+                max-width: 100%;
+            }
+
+            &-link {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    // Bills end =============
 
 }

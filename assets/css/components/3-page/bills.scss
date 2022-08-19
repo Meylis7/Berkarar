@@ -80,6 +80,8 @@
             display: flex;
             align-items: center;
 
+            max-width: calc(100% - 220px);
+
             p {
                 font-weight: 700;
                 font-size: 18px;
