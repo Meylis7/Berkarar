@@ -5,6 +5,7 @@ let logout = document.querySelector('.log-out');
 
 let burger = document.querySelector('.burger');
 let search = document.querySelector('.search');
+let more = document.querySelector('.more');
 let menu = document.querySelector('.menu');
 let header = document.querySelector('.header');
 let nav = document.querySelector('.nav');
@@ -71,6 +72,17 @@ if (burger != undefined) {
 
 if (search != undefined) {
     search.addEventListener('click', function () {
+        sleep(2).then(() => {
+            menu.classList.toggle('active');
+            header.classList.add('active');
+            nav.classList.add('active');
+            body.classList.toggle('active');
+        })
+    });
+}
+
+if (more != undefined) {
+    more.addEventListener('click', function () {
         sleep(2).then(() => {
             menu.classList.toggle('active');
             header.classList.add('active');

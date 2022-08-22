@@ -2393,8 +2393,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 22px;
   color: #292929;
   border-bottom: 2px solid rgba(23, 23, 23, 0.5);
-  padding: 10px 0;
-  width: 100%;
+  padding: 10px;
+  width: calc(100% - 20px);
   font-family: "Montserrat", sans-serif;
 }
 .contact_input input::-webkit-input-placeholder {
@@ -2412,6 +2412,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .contact_input input::placeholder {
   color: rgba(23, 23, 23, 0.5);
 }
+.contact_input input:focus {
+  background: #FFB100;
+  border-radius: 5px 5px 0 0;
+}
 .contact_message {
   width: 100%;
   margin: 30px 25px;
@@ -2422,8 +2426,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 22px;
   color: #292929;
   border-bottom: 2px solid rgba(23, 23, 23, 0.5);
-  padding: 10px 0;
-  width: 100%;
+  padding: 10px;
+  width: calc(100% - 20px);
   font-family: "Montserrat", sans-serif;
   resize: none;
   min-height: 100px;
@@ -2442,6 +2446,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .contact_message textarea::placeholder {
   color: rgba(23, 23, 23, 0.5);
+}
+.contact_message textarea:focus {
+  background: #FFB100;
+  border-radius: 5px 5px 0 0;
 }
 .contact_btn {
   display: -webkit-box;
@@ -2510,6 +2518,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 29px;
   color: #FFFFFF;
   margin-bottom: 50px;
+  position: relative;
 }
 .contact_info-txt {
   font-weight: 700;
@@ -2523,6 +2532,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 .contact_info-txt span {
   width: 24px;
@@ -2543,6 +2553,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 .contact_info-media a {
   display: block;
@@ -3303,6 +3314,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
     max-width: 100%;
     width: 100%;
   }
+
+  .contact_form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact_box {
+    width: calc(100% - 90px);
+  }
+  .contact_info {
+    width: calc(100% - 90px);
+  }
+  .contact_map {
+    height: 550px;
+  }
 }
 @media (max-width: 1000px) {
   .shops_item {
@@ -3456,7 +3483,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: none;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 720px) {
+  .header .logo {
+    width: calc(100% - 210px);
+    height: 35px;
+  }
+
   .shops_tab {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3559,5 +3591,227 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .bill_item-link {
     margin-top: 20px;
+  }
+
+  .contact_info {
+    background: #fff;
+    padding: 30px 20px;
+    width: calc(100% - 40px);
+  }
+  .contact_info-title {
+    color: #292929;
+    line-height: 1.4;
+  }
+  .contact_info-txt {
+    color: #292929;
+  }
+  .contact_info-txt span svg path {
+    fill: #FFB100;
+  }
+  .contact_info-media a {
+    padding: 10px;
+    border-radius: 5px;
+    background: #292929;
+    width: 26px;
+    height: 26px;
+  }
+  .contact_info-media a svg path {
+    fill: #FFB100;
+  }
+  .contact_info .wave {
+    display: none;
+  }
+  .contact_box {
+    padding: 30px 20px;
+    width: calc(100% - 40px);
+  }
+  .contact_box-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  .contact_box-row span {
+    width: 30px;
+    height: 30px;
+  }
+  .contact_input {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .contact_message {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 520px) {
+  .auto_container {
+    padding: 0 15px;
+  }
+
+  .header {
+    padding: 25px 0;
+  }
+  .header .lang_current {
+    padding: 8px;
+  }
+  .header .lang_arrow {
+    display: none;
+  }
+  .header .lang_flag {
+    width: 15px;
+    height: 15px;
+  }
+  .header .logo {
+    width: calc(100% - 160px);
+  }
+  .header .burger {
+    width: 36px;
+    height: 36px;
+  }
+
+  .menu.active {
+    top: 85px;
+    height: calc(100% - 85px);
+  }
+  .menu_search-title {
+    font-size: 28px;
+  }
+  .menu_search-btn {
+    padding: 15px 25px;
+    font-size: 14px;
+  }
+  .menu_search-input {
+    width: calc(100% - 110px);
+    margin-right: 0;
+  }
+  .menu_search-input input {
+    font-size: 14px;
+  }
+
+  .hero_item-photo {
+    height: 500px;
+  }
+  .hero_item-link {
+    font-size: 13px;
+  }
+
+  .shops {
+    padding: 50px 0;
+  }
+  .shops_tab-link {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .shops_item {
+    height: 320px;
+  }
+
+  .movie_link {
+    font-size: 19px;
+    margin-bottom: 25px;
+  }
+  .movie_item-photo {
+    height: 380px;
+  }
+
+  .rest_tabs-link {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .rest_item-photo {
+    height: 180px;
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
+
+  .footer_col {
+    width: calc(50% - 15px);
+    margin-right: 15px;
+  }
+  .footer_col:nth-child(3) {
+    margin-right: 20px;
+  }
+
+  .intro {
+    min-height: 590px;
+  }
+  .intro_info {
+    min-height: 590px;
+    margin-top: 30px;
+  }
+  .intro_info-title {
+    font-size: 36px;
+  }
+  .intro_info-txt {
+    font-size: 18px;
+  }
+
+  .about {
+    padding: 40px 0;
+  }
+  .about_item-title {
+    font-size: 32px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  .about_item-txt {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .about_item-photo {
+    height: 320px;
+  }
+
+  .contact {
+    margin-top: -140px;
+  }
+  .contact_box-title {
+    font-size: 20px;
+  }
+  .contact_box-row {
+    margin-bottom: 20px;
+  }
+  .contact_info-title {
+    font-size: 20px;
+  }
+  .contact_info-media {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact_info-media a {
+    margin-right: 15px;
+  }
+  .contact_map {
+    height: 460px;
+  }
+}
+@media (max-width: 350px) {
+  .footer_col-link {
+    font-size: 12px;
+  }
+
+  .intro_info {
+    margin-top: 55px;
+  }
+  .intro_info-title {
+    font-size: 30px;
+  }
+  .intro_info-txt {
+    font-size: 16px;
+  }
+
+  .about_item-title {
+    font-size: 26px;
+  }
+  .about_item-txt {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .about_item-photo {
+    height: 320px;
+  }
+
+  .bill_item > div p {
+    font-size: 16px;
   }
 }

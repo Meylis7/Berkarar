@@ -63,8 +63,20 @@
 //     }
 // }
 
+@mixin sm-md {
+    @media (max-width: 350px) {
+        @content;
+    }
+}
+
+@mixin sm-xl {
+    @media (max-width: 520px) {
+        @content;
+    }
+}
+
 @mixin md-sm {
-    @media (max-width: 700px) {
+    @media (max-width: 720px) {
         @content;
     }
 }

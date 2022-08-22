@@ -57,12 +57,17 @@
             line-height: 22px;
             color: $gray;
             border-bottom: 2px solid rgba(23, 23, 23, 0.5);
-            padding: 10px 0;
-            width: 100%;
+            padding: 10px;
+            width: calc(100% - 20px);
             font-family: 'Montserrat', sans-serif;
 
             &::placeholder {
                 color: rgba(23, 23, 23, 0.5);
+            }
+
+            &:focus {
+                background: $yellow;
+                border-radius: 5px 5px 0 0;
             }
         }
     }
@@ -77,14 +82,18 @@
             line-height: 22px;
             color: $gray;
             border-bottom: 2px solid rgba(23, 23, 23, 0.5);
-            padding: 10px 0;
-            width: 100%;
+            padding: 10px;
+            width: calc(100% - 20px);
             font-family: 'Montserrat', sans-serif;
             resize: none;
             min-height: 100px;
 
             &::placeholder {
                 color: rgba(23, 23, 23, 0.5);
+            }
+            &:focus {
+                background: $yellow;
+                border-radius: 5px 5px 0 0;
             }
         }
     }
@@ -150,6 +159,7 @@
             line-height: 29px;
             color: #FFFFFF;
             margin-bottom: 50px;
+            position: relative;
         }
 
         &-txt {
@@ -161,6 +171,7 @@
 
             display: flex;
             align-items: center;
+            position: relative;
 
             span {
                 width: 24px;
@@ -177,6 +188,7 @@
         &-media {
             display: flex;
             align-items: center;
+            position: relative;
 
             a {
                 display: block;
