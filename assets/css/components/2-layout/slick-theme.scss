@@ -256,7 +256,59 @@ $slick-opacity-not-active: 0.25 !default;
   }
 }
 
+.post_slider {
 
+  .slick-dots {
+    position: absolute;
+    bottom: -55px;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+      position: relative;
+      // height: 14px;
+      // width: 14px;
+      cursor: pointer;
+      margin: 0 8px;
+
+      button {
+        border: 0;
+        display: block;
+        height: 10px;
+        width: 40px;
+        outline: none;
+        color: transparent;
+        border-radius: 27px;
+        background: $gray;
+        cursor: pointer;
+        // margin: 0 8px;
+        @include transition;
+
+        &:focus {
+          outline: none;
+          background: $yellow;
+        }
+      }
+
+      &.slick-active button {
+        background: $yellow;
+        width: 40px;
+        border-radius: 27px;
+
+      }
+
+      // &.slick-active {
+      //   width: 28px;
+      // }
+    }
+  }
+}
 
 
 .slick-next {

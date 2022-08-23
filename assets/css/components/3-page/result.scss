@@ -4,6 +4,8 @@
 
     .menu {
         &_search {
+            padding-top: 0;
+
             &-title {
                 color: $gray;
             }
