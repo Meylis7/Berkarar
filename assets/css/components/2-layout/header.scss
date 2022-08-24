@@ -395,7 +395,10 @@
     &.active {
         top: 210px;
         animation: header .3s linear;
+    }
 
+    .mobile_buttons {
+        display: none;
     }
 
     &::-webkit-scrollbar {

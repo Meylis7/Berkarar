@@ -80,6 +80,29 @@
             height: calc(100% - 130px);
         }
 
+        .mobile_buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 40px;
+            background: $black;
+            border-radius: 5px;
+            margin-bottom: 60px;
+
+            &-link {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 1.4;
+                color: #fff;
+                margin-right: 10px;
+                display: block;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
         &_box {
             flex-wrap: wrap;
         }
@@ -436,6 +459,14 @@
     // Menu ====================
     .menu {
 
+        .mobile_buttons {
+            justify-content: space-between;
+
+            &-link {
+                font-size: 18px;
+            }
+        }
+
         &_search {
             padding-top: 30px;
 
@@ -647,6 +678,20 @@
     }
 
     // Header end ============
+
+    // Menu ================
+    .menu {
+        .mobile_buttons {
+            justify-content: space-between;
+            padding: 30px;
+
+            &-link {
+                font-size: 16px;
+            }
+        }
+    }
+
+    // Menu end ============
 
     // Shops =================
     .shops {
@@ -1032,6 +1077,20 @@
         &.active {
             top: 85px;
             height: calc(100% - 85px);
+        }
+
+        .mobile_buttons {
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: unset;
+            padding: 20px 30px;
+
+            &-link {
+                font-size: 16px;
+                width: calc(50% - 20px);
+                margin: 15px 10px;
+                text-align: center;
+            }
         }
 
         &_search {
