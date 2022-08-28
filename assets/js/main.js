@@ -13,6 +13,7 @@ let body = document.querySelector('body');
 
 let lang_current = document.querySelector('.lang_current');
 let lang_box = document.querySelector('.lang_box');
+let mobile_link = document.querySelectorAll('.mobile_buttons-link');
 
 
 // let info_icon = document.querySelectorAll('.info_icon');
@@ -92,12 +93,26 @@ if (more != undefined) {
     });
 }
 
+if (mobile_link != undefined) {
+    mobile_link.forEach(x => {
+        x.addEventListener('click', function () {
+            sleep(2).then(() => {
+                menu.classList.remove('active');
+                header.classList.remove('active');
+                nav.classList.remove('active');
+                body.classList.remove('active');
+            });
+        });
+    })
+}
+
 if (lang_current != undefined) {
     lang_current.addEventListener('click', function () {
         sleep(2).then(() => {
             lang_box.classList.toggle('active');
         })
     });
+
 }
 
 
