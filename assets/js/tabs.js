@@ -3,16 +3,19 @@ const formItem = document.querySelectorAll(".tabItem");
 formBtn.forEach((e) => {
     onTabClick(formBtn, formItem, e);
 });
-const formOuterBtn = document.querySelectorAll(".formOuterBtn");
-const formOuterItem = document.querySelectorAll(".formOuterItem");
+
+const formOuterBtn = document.querySelectorAll(".tabLink");
+const formOuterItem = document.querySelectorAll(".tabInfo");
 formOuterBtn.forEach((e) => {
     onTabClick(formOuterBtn, formOuterItem, e);
 });
+
 const heroBtn = document.querySelectorAll(".heroBtn");
 const heroItem = document.querySelectorAll(".heroItem");
 heroBtn.forEach((e) => {
     onTabClick(heroBtn, heroItem, e);
 });
+
 function onTabClick(formBtns, formItems, itemForm) {
     itemForm.addEventListener("click", function (e) {
         let currentformBtn = itemForm;

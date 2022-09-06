@@ -1,7 +1,5 @@
 
 // var ==========================
-let user = document.querySelector('.user');
-let logout = document.querySelector('.log-out');
 
 let burger = document.querySelector('.burger');
 let search = document.querySelector('.search');
@@ -15,9 +13,9 @@ let lang_current = document.querySelector('.lang_current');
 let lang_box = document.querySelector('.lang_box');
 let mobile_link = document.querySelectorAll('.mobile_buttons-link');
 
+// let movie_link = document.querySelectorAll('.movie_item-link');
 
-// let info_icon = document.querySelectorAll('.info_icon');
-// let pop_info = document.querySelectorAll('.pop_info');
+
 
 
 
@@ -51,7 +49,6 @@ window.onclick = function (e) {
     if (lang_box.classList.contains('active') && !e.target.closest('.lang_current')) {
         lang_box.classList.remove('active')
     }
-
 
 }
 
@@ -115,49 +112,16 @@ if (lang_current != undefined) {
 
 }
 
-
-// if (navs_list_link != undefined && !lang) {
-//     navs_list_link.forEach(x => {
+// if (movie_link != undefined) {
+//     movie_link.forEach(x => {
 //         x.addEventListener('click', function () {
 //             sleep(2).then(() => {
-//                 navs.classList.remove('active');
-//                 navs_list.classList.remove('active');
+//                 console.log("klkl")
+//                 body.classList.add('active');
 //             });
 //         });
 //     })
 // }
 
-// if (info_icon != undefined) {
-//     info_icon.forEach(r => {
-//         r.addEventListener('click', function () {
-//             sleep(2).then(() => {
-//                 pop_info.forEach(p => {
-//                     p.classList.remove('active');
-//                 })
 
-//                 this.nextElementSibling.classList.toggle("active");
-//             })
-//         });
-//     });
-// }
-
-// Accordion =============================
-
-let accordion = document.getElementsByClassName("accord");
-// let i;
-// let e;
-
-for (i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-            panel.classList.remove("active")
-        } else {
-            panel.style.maxHeight = "500px";
-            panel.classList.add("active")
-        }
-    });
-}
 

@@ -622,6 +622,10 @@
         background: #fff;
 
         .rest {
+            &_block {
+                max-width: unset;
+            }
+
             &_item {
                 width: calc(25% - 28px);
                 margin: 15px 12px;
@@ -673,28 +677,26 @@
 
     &_block {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         flex-wrap: wrap;
+        max-width: 1350px;
+        margin: 0 auto;
 
         &.active {
             display: flex !important;
-
-            // .rest_item {
-            //     max-height: initial;
-            // }
         }
     }
 
-    &_box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: -15px -12px;
-    }
+    // &_box {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content: center;
+    //     margin: -15px -12px;
+    // }
 
     &_item {
         width: calc(33.33% - 54px);
-        max-width: 400px;
+        // max-width: 400px;
         margin: 25px;
         border: 2px solid rgba(41, 41, 41, 0.5);
         border-radius: 5px 5px 0px 0px;
@@ -783,6 +785,20 @@
 
 
 .tabItem {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+.tabInfo {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+.heroItem {
     display: none;
 
     &.active {

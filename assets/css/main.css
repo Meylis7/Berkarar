@@ -822,7 +822,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 110;
   background: rgba(0, 0, 0, 0.5);
   display: none;
   -webkit-box-align: center;
@@ -1740,6 +1740,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .rest.page {
   background: #fff;
 }
+.rest.page .rest_block {
+  max-width: unset;
+}
 .rest.page .rest_item {
   width: calc(25% - 28px);
   margin: 15px 12px;
@@ -1791,31 +1794,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 .rest_block.active {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
-.rest_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: -15px -12px;
-}
 .rest_item {
   width: calc(33.33% - 54px);
-  max-width: 400px;
   margin: 25px;
   border: 2px solid rgba(41, 41, 41, 0.5);
   border-radius: 5px 5px 0px 0px;
@@ -1912,6 +1902,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
 }
 .tabItem.active {
+  display: block;
+}
+
+.tabInfo {
+  display: none;
+}
+.tabInfo.active {
+  display: block;
+}
+
+.heroItem {
+  display: none;
+}
+.heroItem.active {
   display: block;
 }
 
@@ -3313,14 +3317,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: none;
   }
 
-  .shops_block {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .hero_item-photo {
+    height: 650px;
+  }
+
+  .shops .auto_container {
+    padding: 0 15px;
   }
   .shops_item {
-    width: calc(45% - 10px);
-    height: 440px;
+    height: 420px;
   }
 
   .footer_box {
@@ -3407,6 +3412,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .rest_item-photo {
     height: 190px;
+  }
+
+  .shops_item {
+    height: 350px;
   }
 
   .copy_row {
@@ -3789,6 +3798,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .rest_item {
     width: 100%;
+    max-width: 450px;
     margin: 15px 0;
   }
 
@@ -3935,13 +3945,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 16px;
   }
   .result .menu_search-input {
-    width: calc(100% - 166px);
+    width: 100%;
   }
   .result .menu_search-input input {
     font-size: 16px;
     padding: 12px 15px;
-    width: calc(100% - 30px);
+    width: calc(100% - 0px);
     line-height: 1.4;
+  }
+  .result .menu_search-btn {
+    width: 100%;
+    margin-top: 15px;
   }
 }
 @media (max-width: 520px) {
@@ -4178,8 +4192,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 26px;
   }
   .result .menu_search-input {
-    width: calc(100% - 119px);
-    margin-right: 20px;
+    margin-right: 0px;
   }
   .result .menu_search-input input {
     font-size: 16px;

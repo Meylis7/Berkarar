@@ -127,15 +127,25 @@
 
     // Menu end ================
 
+    // Hero ====================
+    .hero {
+        &_item {
+            &-photo {
+                height: 650px;
+            }
+        }
+    }
+
+    // Hero end ================
+
     // Shops ================
     .shops {
-        &_block {
-            justify-content: center;
+        .auto_container {
+            padding: 0 15px;
         }
 
-        &_item {
-            width: calc(45% - 10px);
-            height: 440px;
+        &_item  {
+            height: 420px;
         }
     }
 
@@ -287,6 +297,15 @@
     }
 
     // Restaurants end ============
+
+    // Shops ================
+    .shops {
+        &_item {
+            height: 350px;
+        }
+    }
+
+    // Shops end ============
 
     // Copyright ================
     .copy {
@@ -818,6 +837,7 @@
 
         &_item {
             width: 100%;
+            max-width: 450px;
             margin: 15px 0;
         }
     }
@@ -1020,14 +1040,19 @@
                 }
 
                 &-input {
-                    width: calc(100% - 166px);
+                    width: 100%;
 
                     input {
                         font-size: 16px;
                         padding: 12px 15px;
-                        width: calc(100% - 30px);
+                        width: calc(100% - 0px);
                         line-height: 1.4;
                     }
+                }
+
+                &-btn {
+                    width: 100%;
+                    margin-top: 15px;
                 }
             }
         }
@@ -1408,8 +1433,7 @@
                 }
 
                 &-input {
-                    width: calc(100% - 119px);
-                    margin-right: 20px;
+                    margin-right: 0px;
 
                     input {
                         font-size: 16px;
