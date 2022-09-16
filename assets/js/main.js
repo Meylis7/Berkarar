@@ -9,6 +9,9 @@ let header = document.querySelector('.header');
 let nav = document.querySelector('.nav');
 let body = document.querySelector('body');
 
+let user_title = document.querySelector('.user_title');
+let user_group = document.querySelector('.user_group');
+
 let lang_current = document.querySelector('.lang_current');
 let lang_box = document.querySelector('.lang_box');
 let mobile_link = document.querySelectorAll('.mobile_buttons-link');
@@ -50,6 +53,10 @@ window.onclick = function (e) {
         lang_box.classList.remove('active')
     }
 
+    if (user_group.classList.contains('active') && !e.target.closest('.user_title')) {
+        user_group.classList.remove('active')
+    }
+
 }
 
 
@@ -64,6 +71,7 @@ if (burger != undefined) {
             header.classList.add('active');
             nav.classList.add('active');
             body.classList.toggle('active');
+            burger.classList.toggle('active');
         })
     });
 }
@@ -109,7 +117,14 @@ if (lang_current != undefined) {
             lang_box.classList.toggle('active');
         })
     });
+}
 
+if (user_title != undefined) {
+    user_title.addEventListener('click', function () {
+        sleep(2).then(() => {
+            user_group.classList.toggle('active');
+        })
+    });
 }
 
 // if (movie_link != undefined) {

@@ -35,6 +35,13 @@
                 width: calc(25% - 28px);
                 margin: 15px 12px;
             }
+
+            &_box {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: -15px -12px;
+            }
         }
     }
 }

@@ -38,7 +38,7 @@
 
             font-weight: 700;
             font-size: 14px;
-            line-height: 17px;
+            line-height: 1.2;
             color: #FFFFFF;
             @include transition;
 
@@ -91,6 +91,20 @@
                 &::before,
                 &::after {
                     background: #fff;
+                }
+            }
+        }
+
+        &.active {
+            span {
+                transform: rotate(25deg);
+
+                &::before {
+                    content: none;
+                }
+
+                &::after {
+                    transform: rotate(-25deg);
                 }
             }
         }
@@ -154,7 +168,7 @@
 
             font-weight: 700;
             font-size: 14px;
-            line-height: 17px;
+            line-height: 1.2;
             color: $black;
 
         }
@@ -206,7 +220,7 @@
 
                 font-weight: 700;
                 font-size: 14px;
-                line-height: 17px;
+                line-height: 1.2;
                 color: #fff;
 
                 span {
@@ -223,6 +237,89 @@
                 &:hover {
                     background: #fff;
                     color: $gray;
+                }
+            }
+        }
+    }
+
+    .user {
+        position: relative;
+        display: block;
+
+        &_title {
+            cursor: pointer;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            padding: 15px 25px 15px;
+
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.2;
+            color: #fff;
+            @include transition;
+
+            width: 50px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            span {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                @include transformY;
+                display: block;
+                width: 12px;
+                // height: 6px;
+
+                svg {
+                    @include ImgCon;
+
+                    path {
+                        @include transition;
+                    }
+                }
+            }
+
+            &:hover {
+                border-color: $yellow;
+                color: $gray;
+                background: $yellow;
+
+                span {
+                    path {
+                        fill: $gray;
+                    }
+                }
+            }
+        }
+
+        &_group {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            width: 100%;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            a {
+                background: $black;
+                color: #fff;
+                display: block;
+                padding: 8px 10px;
+                text-align: center;
+                border-radius: 4px;
+
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 1.2;
+                @include transition;
+
+                &:hover {
+                    // color: $gray;
+                    background: $yellow;
                 }
             }
         }

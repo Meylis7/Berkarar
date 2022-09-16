@@ -191,7 +191,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   font-weight: 700;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.2;
   color: #FFFFFF;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
@@ -249,6 +249,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .header .burger:hover span::before, .header .burger:hover span::after {
   background: #fff;
+}
+.header .burger.active span {
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+.header .burger.active span::before {
+  content: none;
+}
+.header .burger.active span::after {
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
 }
 .header .burger span {
   display: block;
@@ -317,7 +328,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 10px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.2;
   color: #171717;
 }
 .header .lang_flag {
@@ -373,7 +384,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -moz-transition: all 0.2s ease-in-out 0s;
   font-weight: 700;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.2;
   color: #fff;
 }
 .header .lang_box a span {
@@ -391,6 +402,84 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .header .lang_box a:hover {
   background: #fff;
   color: #292929;
+}
+.header .user {
+  position: relative;
+  display: block;
+}
+.header .user_title {
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 15px 25px 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  width: 50px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.header .user_title span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  -moz-ransform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: block;
+  width: 12px;
+}
+.header .user_title span svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+}
+.header .user_title span svg path {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.header .user_title:hover {
+  border-color: #FFB100;
+  color: #292929;
+  background: #FFB100;
+}
+.header .user_title:hover span path {
+  fill: #292929;
+}
+.header .user_group {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  display: none;
+}
+.header .user_group.active {
+  display: block;
+}
+.header .user_group a {
+  background: #171717;
+  color: #fff;
+  display: block;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.header .user_group a:hover {
+  background: #FFB100;
 }
 
 .m-rl {
@@ -1867,7 +1956,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 10px 15px;
   background: #FFB100;
   color: #171717;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
   border-radius: 5px;
@@ -1875,27 +1964,50 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .rest_item-link {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  color: #FFB100;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #292929;
+  background: #FFB100;
+  padding: 10px;
+  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  border: 1px solid transparent;
+}
+.rest_item-link:hover {
+  background: transparent;
+  border-color: #FFB100;
+  color: #FFB100;
+}
+.rest_item-link:hover path,
+.rest_item-link:hover rect {
+  stroke: #FFB100;
 }
 .rest_item-link span {
   display: block;
-  margin-right: 7px;
-  width: 20px;
-  height: 20px;
+  margin-left: 7px;
+  width: 16px;
+  height: 16px;
 }
 .rest_item-link span svg {
   width: 100%;
   height: 100%;
   object-fit: contain;
   -o-object-fit: contain;
+}
+.rest_item-link span svg path,
+.rest_item-link span svg rect {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  stroke: #292929;
 }
 
 .tabItem {
@@ -2823,6 +2935,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: calc(25% - 28px);
   margin: 15px 12px;
 }
+.result.page .rest_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: -15px -12px;
+}
 
 /* Slider */
 .slick-slider {
@@ -3263,6 +3386,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 @media (max-width: 1400px) {
   .header_item-link {
+    display: none;
+  }
+  .header .user {
     display: none;
   }
 
@@ -3800,6 +3926,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
     width: 100%;
     max-width: 450px;
     margin: 15px 0;
+  }
+  .rest_item-floor {
+    font-size: 16px;
+  }
+  .rest_item-link {
+    font-size: 16px;
+  }
+  .rest_item-link span {
+    width: 20px;
+    height: 20px;
   }
 
   .about_item-photo {

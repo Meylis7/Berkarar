@@ -687,13 +687,6 @@
         }
     }
 
-    // &_box {
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     justify-content: center;
-    //     margin: -15px -12px;
-    // }
-
     &_item {
         width: calc(33.33% - 54px);
         // max-width: 400px;
@@ -751,7 +744,7 @@
             padding: 10px 15px;
             background: $yellow;
             color: $black;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             line-height: 1.2;
             border-radius: 5px;
@@ -760,21 +753,43 @@
 
         &-link {
             font-weight: 700;
-            font-size: 18px;
-            line-height: 22px;
-            color: $yellow;
+            font-size: 15px;
+            line-height: 1.2;
+            color: $gray;
+            background: $yellow;
+            padding: 10px;
+            border-radius: 4px;
 
             display: flex;
             align-items: center;
+            @include transition;
+            border: 1px solid transparent;
+
+            &:hover {
+                background: transparent;
+                border-color: $yellow;
+                color: $yellow;
+
+                path,
+                rect {
+                    stroke: $yellow;
+                }
+            }
 
             span {
                 display: block;
-                margin-right: 7px;
-                width: 20px;
-                height: 20px;
+                margin-left: 7px;
+                width: 16px;
+                height: 16px;
 
                 svg {
                     @include ImgCon;
+
+                    path,
+                    rect {
+                        @include transition;
+                        stroke: $gray;
+                    }
                 }
             }
         }
@@ -791,6 +806,7 @@
         display: block;
     }
 }
+
 .tabInfo {
     display: none;
 
@@ -798,6 +814,7 @@
         display: block;
     }
 }
+
 .heroItem {
     display: none;
 
