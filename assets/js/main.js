@@ -16,6 +16,10 @@ let lang_current = document.querySelector('.lang_current');
 let lang_box = document.querySelector('.lang_box');
 let mobile_link = document.querySelectorAll('.mobile_buttons-link');
 
+let logout = document.querySelector('.logout');
+let logout_link = document.querySelector('.logout a');
+
+
 // let movie_link = document.querySelectorAll('.movie_item-link');
 
 
@@ -53,8 +57,10 @@ window.onclick = function (e) {
         lang_box.classList.remove('active')
     }
 
-    if (user_group.classList.contains('active') && !e.target.closest('.user_title')) {
-        user_group.classList.remove('active')
+    if (user_group != undefined) {
+        if (user_group.classList.contains('active') && !e.target.closest('.user_title')) {
+            user_group.classList.remove('active')
+        }
     }
 
 }
@@ -72,6 +78,14 @@ if (burger != undefined) {
             nav.classList.add('active');
             body.classList.toggle('active');
             burger.classList.toggle('active');
+        })
+    });
+}
+
+if (logout != undefined) {
+    logout.addEventListener('click', function () {
+        sleep(2).then(() => {
+            logout_link.classList.toggle('active');
         })
     });
 }

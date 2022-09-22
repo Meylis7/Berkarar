@@ -796,6 +796,45 @@
     }
 }
 
+.pag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    &_group {
+        display: flex;
+        align-items: center;
+
+        input {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #1C1717;
+            width: 90px;
+            margin: 0 7px;
+        }
+    }
+
+    &_btn {
+        display: block;
+        width: 45px;
+        height: 45px;
+
+        svg {
+            @include ImgCon;
+        }
+    }
+
+    &_txt {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #7D7D7D;
+    }
+}
+
 // Restaurant end ======================
 
 

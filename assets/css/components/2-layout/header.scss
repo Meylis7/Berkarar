@@ -453,8 +453,6 @@
     }
 }
 
-
-
 @keyframes header {
     0% {
         opacity: 0;
@@ -502,17 +500,6 @@
     &::-webkit-scrollbar {
         display: none;
     }
-
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: calc(100% + 120px);
-    //     background: rgba(0, 0, 0, .7);
-    //     z-index: -1;
-    // }
 
     &_search {
         position: relative;
