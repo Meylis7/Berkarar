@@ -251,15 +251,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background: #fff;
 }
 .header .burger.active span {
-  -webkit-transform: rotate(25deg);
-          transform: rotate(25deg);
+  background: none;
 }
 .header .burger.active span::before {
-  content: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
 }
 .header .burger.active span::after {
-  -webkit-transform: rotate(-25deg);
-          transform: rotate(-25deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 0;
 }
 .header .burger span {
   display: block;
@@ -1135,6 +1137,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 1.2;
   color: #FFB100;
   margin-bottom: 25px;
+  display: block;
 }
 .footer_col-link {
   display: block;
@@ -1466,14 +1469,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
+  max-width: 130px;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  text-align: center;
 }
 .shops_item-name {
   font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 18px;
+  line-height: 1.3;
   text-transform: lowercase;
   color: #171717;
   background: #fff;
@@ -3448,6 +3453,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     height: calc(100% - 130px);
   }
   .menu .mobile_buttons {
+    display: block;
+    margin-bottom: 60px;
+  }
+  .menu .mobile_buttons .row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3459,7 +3468,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     padding: 40px;
     background: #171717;
     border-radius: 5px;
-    margin-bottom: 60px;
   }
   .menu .mobile_buttons-link {
     font-weight: 700;
@@ -3483,6 +3491,59 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: none;
   }
   .menu .mobile_buttons-link a.active {
+    display: block;
+  }
+  .menu .mobile_user-link {
+    width: calc(100% - 40px);
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px 20px;
+    background: #171717;
+    display: block;
+    position: relative;
+  }
+  .menu .mobile_user-link.active span::after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    top: 20%;
+  }
+  .menu .mobile_user-link span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+  }
+  .menu .mobile_user-link span::after {
+    content: "";
+    background: url("../images/svg/mouse-arrow.svg") no-repeat center;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    -moz-ransform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+  }
+  .menu .mobile_user-link a {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #fff;
+    display: block;
+    margin: 40px 0 0 0;
+    display: none;
+  }
+  .menu .mobile_user-link a.active {
     display: block;
   }
   .menu_box {
@@ -3741,6 +3802,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .menu_search-title {
     font-size: 32px;
   }
+  .menu_search-input {
+    width: calc(100% - 166px);
+  }
   .menu_search-input input {
     padding: 15px 20px;
   }
@@ -3876,7 +3940,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     height: 35px;
   }
 
-  .menu .mobile_buttons {
+  .menu .mobile_buttons .row {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -4195,6 +4259,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .menu .mobile_buttons {
     background: none;
   }
+  .menu .mobile_buttons .row {
+    background: none;
+    padding: 0;
+  }
   .menu .mobile_buttons-link {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4206,6 +4274,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background: #171717;
     font-size: 18px;
   }
+  .menu .mobile_user-link {
+    padding: 15px 20px;
+    margin-top: 5px;
+  }
+  .menu .mobile_user-link span {
+    font-size: 18px;
+  }
+  .menu .mobile_user-link a {
+    font-size: 18px;
+  }
   .menu_search-title {
     font-size: 28px;
   }
@@ -4214,7 +4292,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 14px;
   }
   .menu_search-input {
-    width: calc(100% - 110px);
+    width: calc(100% - 99px);
     margin-right: 0;
   }
   .menu_search-input input {

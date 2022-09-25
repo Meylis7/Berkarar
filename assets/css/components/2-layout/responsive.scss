@@ -84,40 +84,107 @@
             height: calc(100% - 130px);
         }
 
-        .mobile_buttons {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 40px;
-            background: $black;
-            border-radius: 5px;
-            margin-bottom: 60px;
-
-            &-link {
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 1.4;
-                color: #fff;
-                margin-right: 10px;
+        .mobile {
+            &_buttons {
                 display: block;
+                margin-bottom: 60px;
 
-                &:last-child {
-                    margin-right: 0;
+                .row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 40px;
+                    background: $black;
+                    border-radius: 5px;
                 }
 
-                a {
+                &-link {
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 1.4;
                     color: #fff;
                     margin-right: 10px;
                     display: block;
-                    margin: 40px 0 0 0;
 
-                    display: none;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 1.4;
+                        color: #fff;
+                        margin-right: 10px;
+                        display: block;
+                        margin: 40px 0 0 0;
+
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+
+
+            }
+
+            &_user {
+                &-link {
+                    width: calc(100% - 40px);
+                    text-align: center;
+                    margin-top: 20px;
+
+                    padding: 30px 20px;
+                    background: $black;
+                    display: block;
+                    position: relative;
 
                     &.active {
+                        span {
+                            &::after {
+                                transform: rotate(180deg);
+                                top: 20%;
+                            }
+                        }
+                    }
+
+                    span {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 1.4;
+                        color: #fff;
+                        display: inline-block;
+                        cursor: pointer;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            background: url("../images/svg/mouse-arrow.svg") no-repeat center;
+                            background-size: contain;
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;
+                            top: 50%;
+                            right: -40px;
+                            @include transformY;
+                            @include transition;
+                        }
+                    }
+
+                    a {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 1.4;
+                        color: #fff;
                         display: block;
+                        margin: 40px 0 0 0;
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
                     }
                 }
             }
@@ -514,6 +581,8 @@
             }
 
             &-input {
+                width: calc(100% - 166px);
+
                 input {
                     padding: 15px 20px;
                 }
@@ -721,10 +790,12 @@
     // Menu ================
     .menu {
         .mobile_buttons {
-            justify-content: center;
-            flex-wrap: wrap;
-            align-items: unset;
-            padding: 20px 30px;
+            .row {
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: unset;
+                padding: 20px 30px;
+            }
 
             &-link {
                 font-size: 16px;
@@ -1146,16 +1217,38 @@
             height: calc(100% - 85px);
         }
 
-        .mobile_buttons {
-            background: none;
+        .mobile {
+            &_buttons {
+                background: none;
 
-            &-link {
-                flex-direction: column;
-                width: calc(100% - 30px);
-                margin: 0 0 15px;
-                padding: 20px 15px;
-                background: #171717;
-                font-size: 18px;
+                .row {
+                    background: none;
+                    padding: 0;
+                }
+
+                &-link {
+                    flex-direction: column;
+                    width: calc(100% - 30px);
+                    margin: 0 0 15px;
+                    padding: 20px 15px;
+                    background: #171717;
+                    font-size: 18px;
+                }
+            }
+
+            &_user {
+                &-link {
+                    padding: 15px 20px;
+                    margin-top: 5px;
+
+                    span {
+                        font-size: 18px;
+                    }
+
+                    a {
+                        font-size: 18px;
+                    }
+                }
             }
         }
 
@@ -1170,7 +1263,7 @@
             }
 
             &-input {
-                width: calc(100% - 110px);
+                width: calc(100% - 99px);
                 margin-right: 0;
 
                 input {

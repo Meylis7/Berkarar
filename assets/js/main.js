@@ -17,7 +17,7 @@ let lang_box = document.querySelector('.lang_box');
 let mobile_link = document.querySelectorAll('.mobile_buttons-link');
 
 let logout = document.querySelector('.logout');
-let logout_link = document.querySelector('.logout a');
+let logout_link = document.querySelectorAll('.logout a');
 
 
 // let movie_link = document.querySelectorAll('.movie_item-link');
@@ -85,7 +85,11 @@ if (burger != undefined) {
 if (logout != undefined) {
     logout.addEventListener('click', function () {
         sleep(2).then(() => {
-            logout_link.classList.toggle('active');
+            logout.classList.toggle('active');
+
+            logout_link.forEach(p => {
+                p.classList.toggle('active');
+            })
         })
     });
 }

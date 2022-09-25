@@ -97,14 +97,17 @@
 
         &.active {
             span {
-                transform: rotate(25deg);
+                // transform: rotate(25deg);
+                background: none;
 
                 &::before {
-                    content: none;
+                    transform: rotate(45deg);
+                    top: 0;
                 }
 
                 &::after {
-                    transform: rotate(-25deg);
+                    transform: rotate(-45deg);
+                    bottom: 0;
                 }
             }
         }
@@ -324,9 +327,7 @@
             }
         }
     }
-
 }
-
 
 .m-rl {
     margin: 0 40px;
