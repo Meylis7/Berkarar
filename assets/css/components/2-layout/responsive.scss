@@ -2,15 +2,15 @@
 @include xlg-xxlg {
 
     // Nav ============================
-    .nav {
-        &_list {
-            li {
-                &:nth-last-child(2) {
-                    display: none;
-                }
-            }
-        }
-    }
+    // .nav {
+    //     &_list {
+    //         li {
+    //             &:nth-last-child(2) {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
 
     // Nav end ========================
 }
@@ -41,15 +41,6 @@
     }
 
     // Header end ============
-
-    // Nav end ================
-    .nav {
-        &.active {
-            top: 133px;
-        }
-    }
-
-    // Nav end ================
 }
 
 // 1400 ============================================
@@ -88,161 +79,40 @@
 
     // Header end ============
 
-    // Nav end ================
+    // Navs ================
     .nav {
-        display: none;
+        &.active {
+            top: 90px;
+        }
     }
 
-    // Nav end ================
+    // Navs end ============
 
-    // Menu ====================
+    // Menu ================
     .menu {
         &.active {
-            top: 130px;
-            height: calc(100% - 130px);
+            top: 149px;
+            height: calc(100% - 148px);
         }
 
-        .mobile {
-            &_buttons {
-                display: block;
-                margin-bottom: 60px;
-
-                .row {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    padding: 40px;
-                    background: $black;
-                    border-radius: 5px;
-                }
-
-                &-link {
-                    font-weight: 700;
-                    font-size: 20px;
-                    line-height: 1.4;
-                    color: #fff;
-                    margin-right: 10px;
-                    display: block;
-
-                    &:last-child {
-                        margin-right: 0;
-                    }
-
-                    a {
-                        font-weight: 700;
-                        font-size: 20px;
-                        line-height: 1.4;
-                        color: #fff;
-                        margin-right: 10px;
-                        display: block;
-                        margin: 40px 0 0 0;
-
-                        display: none;
-
-                        &.active {
-                            display: block;
-                        }
-                    }
-                }
-
-
-            }
-
-            &_user {
-                &-link {
-                    width: calc(100% - 40px);
-                    text-align: center;
-                    margin-top: 20px;
-
-                    padding: 30px 20px;
-                    background: $black;
-                    display: block;
-                    position: relative;
-
-                    &.active {
-                        span {
-                            &::after {
-                                transform: rotate(180deg);
-                                top: 20%;
-                            }
-                        }
-                    }
-
-                    span {
-                        font-weight: 700;
-                        font-size: 20px;
-                        line-height: 1.4;
-                        color: #fff;
-                        display: inline-block;
-                        cursor: pointer;
-                        position: relative;
-
-                        &::after {
-                            content: '';
-                            background: url("../images/svg/mouse-arrow.svg") no-repeat center;
-                            background-size: contain;
-                            width: 15px;
-                            height: 15px;
-                            position: absolute;
-                            top: 50%;
-                            right: -40px;
-                            @include transformY;
-                            @include transition;
-                        }
-                    }
-
-                    a {
-                        font-weight: 700;
-                        font-size: 20px;
-                        line-height: 1.4;
-                        color: #fff;
-                        display: block;
-                        margin: 40px 0 0 0;
-                        display: none;
-
-                        &.active {
-                            display: block;
-                        }
-                    }
-                }
-            }
-        }
-
-        &_search {
-            &-title {
-                font-size: 30px;
-            }
-        }
-
-        &_box {
-            flex-wrap: wrap;
-        }
-
-        &_col {
-            width: calc(33.33% - 50px);
-            margin: 0 50px 30px 0;
-
-            &::after {
-                right: -10px;
-            }
-
-            &:nth-child(3) {
-                margin-right: 0;
-
-                &::after {
-                    display: none;
-                }
+        .footer {
+            &_navs {
+                border-top: 1px solid #fff;
+                margin-top: 50px;
+                padding-top: 50px;
             }
         }
     }
 
-    // Menu end ================
+    // Menu end ============
 
     // Hero ====================
     .hero {
         &_item {
+            height: calc(100vh - 110px);
+
             &-photo {
-                height: 650px;
+                height: calc(100vh - 110px);
             }
         }
 
@@ -341,11 +211,15 @@
 
             &-title,
             &-genre {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             &-link {
                 padding: 12px 10px;
+            }
+
+            &-photo {
+                height: 320px;
             }
         }
 
@@ -395,23 +269,31 @@
 
     // Footer ================
     .footer {
+        padding: 40px 0;
+
         &_box {
-            flex-wrap: wrap;
+            display: none;
         }
 
-        &_col {
-            width: calc(33.33% - 34px);
-            // margin-right: 50px;
-            margin: 0 50px 30px 0;
-
-            &:nth-child(3) {
-                margin-right: 0;
-            }
-
-            &::after {
-                display: none;
-            }
+        &_navs {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
         }
+
+        // &_col {
+        //     width: calc(33.33% - 34px);
+        //     // margin-right: 50px;
+        //     margin: 0 50px 30px 0;
+
+        //     &:nth-child(3) {
+        //         margin-right: 0;
+        //     }
+
+        //     &::after {
+        //         display: none;
+        //     }
+        // }
     }
 
     // Footer end ============
@@ -535,7 +417,6 @@
 
         &_photo {
             width: 300px;
-            height: 300px;
             margin-left: 30px;
         }
 
@@ -757,15 +638,181 @@
 
 }
 
-// 1000 =======================================
+// 1024 =======================================
 @include md-xlg {
 
-    // Crumb ====================
-    .crumb {
-        padding-bottom: 40px;
+    // Nav end ================
+    .nav {
+        display: none;
     }
 
-    // Crumb end ================
+    // Nav end ================
+
+    // Menu ====================
+    .menu {
+        &.active {
+            top: 90px;
+            height: calc(100% - 90px);
+        }
+
+        .mobile {
+            &_buttons {
+                display: block;
+                margin-bottom: 25px;
+
+                .row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 20px;
+                    background: $black;
+                    border-radius: 5px;
+                }
+
+                &-link {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 1.4;
+                    color: #fff;
+                    margin-right: 10px;
+                    display: block;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 1.4;
+                        color: #fff;
+                        margin-right: 10px;
+                        display: block;
+                        margin: 40px 0 0 0;
+
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+
+
+            }
+
+            &_user {
+                &-link {
+                    width: calc(100% - 40px);
+                    text-align: center;
+                    margin-top: 20px;
+
+                    padding: 30px 20px;
+                    background: $black;
+                    display: block;
+                    position: relative;
+
+                    &.active {
+                        span {
+                            &::after {
+                                transform: rotate(180deg);
+                                top: 20%;
+                            }
+                        }
+                    }
+
+                    span {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 1.4;
+                        color: #fff;
+                        display: inline-block;
+                        cursor: pointer;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            background: url("../images/svg/mouse-arrow.svg") no-repeat center;
+                            background-size: contain;
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;
+                            top: 50%;
+                            right: -40px;
+                            @include transformY;
+                            @include transition;
+                        }
+                    }
+
+                    a {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 1.4;
+                        color: #fff;
+                        display: block;
+                        margin: 40px 0 0 0;
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_box {
+            flex-wrap: wrap;
+        }
+
+        &_col {
+            width: calc(33.33% - 50px);
+            margin: 0 50px 30px 0;
+
+            &::after {
+                right: -10px;
+            }
+
+            &:nth-child(3) {
+                margin-right: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Menu end ================
+
+    // Mobile ====================
+    .mobile {
+        &_navs {
+            flex-direction: column;
+
+            &-list {
+                width: calc(100% - 40px);
+                margin-bottom: 25px;
+            }
+        }
+
+        &_profile {
+            width: calc(100% - 40px);
+
+            &-title {
+                font-size: 16px;
+                margin-bottom: 30px;
+                padding-bottom: 15px;
+            }
+
+            &-link {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // Mobile end ================
 
     // Shops ======================
     .shops {
@@ -809,6 +856,25 @@
     }
 
     // About end ==================
+
+    // Footer ======================
+    .footer {
+        &_navs {
+            flex-wrap: wrap;
+
+            &-col {
+                width: calc(50% - 20px);
+                max-width: unset;
+                margin-bottom: 30px;
+
+                &:nth-child(3) {
+                    order: 1;
+                }
+            }
+        }
+    }
+
+    // Footer end ==================
 
 
 }
@@ -895,8 +961,10 @@
     // Hero ======================
     .hero {
         &_item {
+            height: calc(100vh - 90px);
+
             &-photo {
-                height: 600px;
+                height: calc(100vh - 90px);
             }
 
             &-link {
@@ -1019,6 +1087,10 @@
             margin-bottom: 40px;
         }
 
+        .shop_slider-item {
+            height: 300px;
+        }
+
         &_info {
             width: 100%;
         }
@@ -1039,6 +1111,9 @@
 
     // Result end =============
 
+    .slick-list {
+        height: unset !important;
+    }
 }
 
 // 720 ==============================================
@@ -1069,6 +1144,13 @@
                 width: calc(50% - 20px);
                 margin: 15px 10px;
                 text-align: center;
+            }
+        }
+
+        .footer {
+            &_navs {
+                margin-top: 30px;
+                padding-top: 30px;
             }
         }
     }
@@ -1535,8 +1617,6 @@
     }
 
     // Result end =============
-
-
 }
 
 // 520 ==========================================
@@ -1645,6 +1725,8 @@
     // Hero ====================
     .hero {
         &_item {
+            height: 500px;
+
             &-photo {
                 height: 500px;
             }
@@ -1755,8 +1837,7 @@
         &_item {
             &-photo {
                 height: 180px;
-                padding: 15px;
-                width: calc(100% - 30px);
+                width: 100%;
             }
         }
     }
@@ -1780,6 +1861,13 @@
 
             &:nth-child(3) {
                 margin-right: 20px;
+            }
+        }
+
+        &_navs {
+            &-col {
+                width: 100%;
+                margin-right: 0;
             }
         }
     }
@@ -1862,9 +1950,9 @@
             }
         }
 
-        &_photo {
-            height: 300px;
-        }
+        // &_photo {
+        //     height: 300px;
+        // }
 
         &_info {
             &-title {

@@ -3,7 +3,7 @@
 
 // Slider =======================================
 $(".hero_slider").slick({
-    dots: false,
+    dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -22,6 +22,38 @@ $(".hero_slider").slick({
     swipeToSlide: true,
     waitForAnimate: false,
     draggable: true,
+});
+
+$(".shop_slider").slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: false,
+    autoplaySpeed: 8000,
+    pauseOnHover: false,
+
+
+    infinite: true,
+    speed: 800,
+    fade: false,
+    adaptiveHeight: true,
+    lazyLoad: 'ondemand',
+
+    cssEase: 'linear',
+    swipeToSlide: true,
+    waitForAnimate: false,
+    draggable: true,
+
+    responsive: [
+        {
+            breakpoint: 1300,
+            settings: {
+                dots: false,
+                arrows: false,
+            }
+        },
+    ]
 });
 
 $(".movie_slider").slick({
@@ -47,7 +79,7 @@ $(".movie_slider").slick({
 
     responsive: [
         {
-            breakpoint: 1400,
+            breakpoint: 1300,
             settings: {
                 slidesToShow: 4,
             }
