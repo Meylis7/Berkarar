@@ -312,13 +312,13 @@ $slick-opacity-not-active: 0.25 !default;
 
 .shop_slider {
   .slick-next {
-    background: url("../images/svg/post-slider-arrow.svg");
-    bottom: -53px;
+    background: url("../images/svg/post-slider-arrow.svg") no-repeat ;
+    bottom: -55px;
   }
 
   .slick-prev {
-    background: url("../images/svg/post-slider-arrow.svg");
-    bottom: -40px;
+    background: url("../images/svg/post-slider-arrow.svg") no-repeat ;
+    bottom: -43px;
   }
 
   .slick-dots {
