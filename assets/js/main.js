@@ -74,8 +74,8 @@ if (burger != undefined) {
     burger.addEventListener('click', function () {
         sleep(2).then(() => {
             menu.classList.toggle('active');
-            header.classList.add('active');
-            nav.classList.add('active');
+            header.classList.toggle('active');
+            nav.classList.toggle('active');
             body.classList.toggle('active');
             burger.classList.toggle('active');
         })

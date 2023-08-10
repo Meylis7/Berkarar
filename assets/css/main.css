@@ -41,6 +41,14 @@ body {
   -moz-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 body.active {
   overflow: hidden;
@@ -343,7 +351,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  padding: 12px 15px;
+  padding: 15px 15px;
   background: #fff;
   border-radius: 10px;
   font-weight: 700;
@@ -1204,6 +1212,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .footer {
   padding: 80px 0;
+  margin: auto 0 0 0;
   background: #292929;
 }
 .footer_box {
@@ -3135,6 +3144,93 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin: -15px -12px;
 }
 
+.error {
+  padding: 80px 0 100px;
+}
+.error_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.error_icon {
+  width: calc(50% - 80px);
+}
+.error_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+}
+.error_info {
+  width: calc(50% - 80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.error_sup-title {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.error_title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #FFB100;
+  margin: 40px 0 25px;
+}
+.error_txt {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #292929;
+  max-width: 400px;
+}
+.error_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 16px 25px;
+  margin-top: 40px;
+  background: #FFB100;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.error_link span {
+  display: block;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+.error_link span svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -o-object-fit: contain;
+  display: block;
+}
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -3582,10 +3678,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .header .logo {
     width: 310px;
-    height: 40px;
-  }
-  .header .burger {
-    width: 40px;
     height: 40px;
   }
   .header .lang_current {
@@ -4109,6 +4201,19 @@ input[type=date]::-webkit-calendar-picker-indicator {
         -ms-flex-order: 1;
             order: 1;
   }
+  .error {
+    padding: 50px 0;
+  }
+  .error_icon {
+    display: none;
+  }
+  .error_info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 100%;
+  }
 }
 @media (max-width: 900px) {
   .menu .mobile_buttons {
@@ -4276,6 +4381,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .header .logo {
     width: calc(100% - 210px);
     height: 35px;
+  }
+  .header .burger {
+    height: 32px;
+  }
+  .header .burger span {
+    margin-right: 0;
+  }
+  .header .burger p {
+    display: none;
   }
   .menu .mobile_buttons .row {
     -webkit-box-pack: center;
@@ -4632,6 +4746,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
     width: 100%;
     margin-top: 15px;
   }
+  .error_sup-title {
+    font-size: 60px;
+  }
+  .error_title {
+    font-size: 22px;
+  }
+  .error_txt {
+    font-size: 14px;
+  }
+  .error_link {
+    font-size: 14px;
+  }
 }
 @media (max-width: 520px) {
   .auto_container {
@@ -4652,10 +4778,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
   .header .logo {
     width: calc(100% - 160px);
-  }
-  .header .burger {
-    width: 36px;
-    height: 36px;
   }
   .menu.active {
     top: 85px;
