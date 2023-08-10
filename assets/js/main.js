@@ -35,11 +35,11 @@ window.onscroll = function () {
     scrollPosition = Math.round(window.scrollY);
 
     if (scrollPosition > 500) {
-        document.querySelector('.header').classList.add('active');
-        document.querySelector('.nav').classList.add('active');
+        document.querySelector('.header').classList.add('fixed');
+        document.querySelector('.nav').classList.add('fixed');
     } else {
-        document.querySelector('.header').classList.remove('active');
-        document.querySelector('.nav').classList.remove('active');
+        document.querySelector('.header').classList.remove('fixed');
+        document.querySelector('.nav').classList.remove('fixed');
     }
 };
 
@@ -158,3 +158,24 @@ if (user_title != undefined) {
 
 
 
+// Accordion =============================
+
+let accordion = document.getElementsByClassName("accord");
+// let i;
+// let e;
+
+for (i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.classList.remove("active")
+        } else {
+            panel.style.maxHeight = "100000px";
+            panel.classList.add("active")
+        }
+    });
+}
+
+// Accordion end =========================

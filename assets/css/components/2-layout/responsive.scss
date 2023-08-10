@@ -499,6 +499,25 @@
         padding: 0 20px;
     }
 
+    // Menu =======================
+    .menu {
+        &_box {
+            flex-wrap: wrap;
+        }
+
+        &_col {
+            width: calc(33.33% - 80px);
+
+            &:nth-child(3) {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Menu end ===================
+
     // Restaurants ================
     .rest {
         &.page {
@@ -647,55 +666,10 @@
     .menu {
         &.active {
             top: 90px;
-            height: calc(100% - 90px);
+            height: calc(100% - 89px);
         }
 
         .mobile {
-            &_buttons {
-                display: block;
-                margin-bottom: 25px;
-
-                .row {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    padding: 20px;
-                    background: $black;
-                    border-radius: 5px;
-                }
-
-                &-link {
-                    font-weight: 700;
-                    font-size: 18px;
-                    line-height: 1.4;
-                    color: #fff;
-                    margin-right: 10px;
-                    display: block;
-
-                    &:last-child {
-                        margin-right: 0;
-                    }
-
-                    a {
-                        font-weight: 700;
-                        font-size: 18px;
-                        line-height: 1.4;
-                        color: #fff;
-                        margin-right: 10px;
-                        display: block;
-                        margin: 40px 0 0 0;
-
-                        display: none;
-
-                        &.active {
-                            display: block;
-                        }
-                    }
-                }
-
-
-            }
-
             &_user {
                 &-link {
                     width: calc(100% - 40px);
@@ -779,35 +753,6 @@
     }
 
     // Menu end ================
-
-    // Mobile ====================
-    .mobile {
-        &_navs {
-            flex-direction: column;
-
-            &-list {
-                width: calc(100% - 40px);
-                margin-bottom: 25px;
-            }
-        }
-
-        &_profile {
-            width: calc(100% - 40px);
-
-            &-title {
-                font-size: 16px;
-                margin-bottom: 30px;
-                padding-bottom: 15px;
-            }
-
-            &-link {
-                font-size: 16px;
-                margin-bottom: 15px;
-            }
-        }
-    }
-
-    // Mobile end ================
 
     // Shops ======================
     .shops {
@@ -896,14 +841,6 @@
 
     // Menu ====================
     .menu {
-
-        .mobile_buttons {
-            justify-content: space-between;
-
-            &-link {
-                font-size: 18px;
-            }
-        }
 
         &_search {
             padding-top: 30px;
@@ -1140,6 +1077,7 @@
 
         .burger {
             height: 32px;
+            border-radius: 50%;
 
             span {
                 margin-right: 0;
@@ -1155,19 +1093,62 @@
 
     // Menu ================
     .menu {
-        .mobile_buttons {
-            .row {
-                justify-content: center;
-                flex-wrap: wrap;
-                align-items: unset;
-                padding: 20px 30px;
+        &_col {
+            margin: 0;
+            width: 100%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(3) {
+                margin-right: 0;
+
+                &::after {
+                    content: none;
+                }
+            }
+
+            &::after {
+                content: none;
+            }
+
+            &-group {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &-title {
+                font-size: 18px;
+            }
+
+            &-box {
+                overflow: hidden;
+                max-height: 0;
+                @include transition;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
             }
 
             &-link {
-                font-size: 16px;
-                width: calc(50% - 20px);
-                margin: 15px 10px;
-                text-align: center;
+                position: relative;
+                padding-left: 50px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 20px;
+                    @include transformY;
+                    width: 10px;
+                    height: 10px;
+                    background: url("../images/svg/nav_link-arrow.png") no-repeat center;
+                }
             }
         }
 
@@ -1175,6 +1156,7 @@
             &_navs {
                 margin-top: 30px;
                 padding-top: 30px;
+                padding-bottom: 20px;
             }
         }
     }
@@ -1675,6 +1657,19 @@
     .header {
         padding: 25px 0;
 
+        .burger {
+            height: 28px;
+
+            span {
+                width: 20px;
+
+                &::before,
+                &::after {
+                    width: 20px;
+                }
+            }
+        }
+
         .lang {
             &_current {
                 padding: 8px;
@@ -1704,25 +1699,13 @@
             height: calc(100% - 85px);
         }
 
-        .mobile {
-            &_buttons {
-                background: none;
-
-                .row {
-                    background: none;
-                    padding: 0;
-                }
-
-                &-link {
-                    flex-direction: column;
-                    width: calc(100% - 30px);
-                    margin: 0 0 15px;
-                    padding: 20px 15px;
-                    background: #171717;
-                    font-size: 18px;
-                }
+        &_col {
+            &-title {
+                font-size: 16px;
             }
+        }
 
+        .mobile {
             &_user {
                 &-link {
                     padding: 15px 20px;
@@ -1740,21 +1723,27 @@
         }
 
         &_search {
+            flex-direction: column;
+
             &-title {
                 font-size: 28px;
             }
 
             &-btn {
-                padding: 15px 25px;
+                padding: 12px 20px;
+                margin-top: 15px;
                 font-size: 14px;
+                width: 100%;
             }
 
             &-input {
-                width: calc(100% - 99px);
+                width: 100%;
                 margin-right: 0;
 
                 input {
                     font-size: 14px;
+                    padding: 12px 15px;
+                    width: calc(100% - 30px);
                 }
             }
         }
