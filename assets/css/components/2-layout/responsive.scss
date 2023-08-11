@@ -1382,11 +1382,11 @@
 
             &-title {
                 font-size: 20px;
-                padding-bottom: 30px;
+                margin-bottom: 30px;
 
                 &.active {
                     &::after {
-                        bottom: 15px;
+                        bottom: -15px;
                     }
                 }
             }
