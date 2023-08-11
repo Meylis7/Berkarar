@@ -2011,12 +2011,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .rest_item-photo {
   width: 100%;
   height: 290px;
+  display: block;
 }
 .rest_item-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   -o-object-fit: cover;
+  display: block;
 }
 .rest_item-info {
   background: #171717;
@@ -2990,6 +2992,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .post_photo {
   width: 500px;
   margin-left: 60px;
+  display: block;
 }
 .post_photo img {
   width: 100%;
