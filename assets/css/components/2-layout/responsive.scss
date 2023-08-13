@@ -77,7 +77,11 @@
     // Navs ================
     .nav {
         &.active {
-            top: 90px;
+            top: 100px;
+        }
+
+        &.fixed {
+            top: 100px;
         }
     }
 

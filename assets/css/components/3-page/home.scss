@@ -691,9 +691,11 @@
         flex-wrap: wrap;
         max-width: 1350px;
         margin: 0 auto;
+        position: relative;
 
         &.active {
             display: flex !important;
+            animation: tabActive .3s linear;
         }
     }
 
@@ -704,6 +706,8 @@
         border: 2px solid rgba(41, 41, 41, 0.5);
         border-radius: 5px 5px 0px 0px;
         background: #fff;
+        display: block;
+        position: relative;
 
         @include transition;
         // max-height: 0;
@@ -854,6 +858,18 @@
         font-size: 18px;
         line-height: 25px;
         color: #7D7D7D;
+    }
+}
+
+@keyframes tabActive {
+    0% {
+        top: 40px;
+        opacity: .3;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
     }
 }
 
