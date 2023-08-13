@@ -34,7 +34,7 @@ function sleep(time) {
 window.onscroll = function () {
     scrollPosition = Math.round(window.scrollY);
 
-    if (scrollPosition > 500) {
+    if (scrollPosition > 200) {
         document.querySelector('.header').classList.add('fixed');
         document.querySelector('.nav').classList.add('fixed');
     } else {
