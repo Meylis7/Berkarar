@@ -374,7 +374,24 @@
         &_item {
             &-photo {
                 width: calc(50% - 25px);
-                height: 500px;
+
+                &.flex {
+                    &>div {
+                        height: 400px;
+
+                        &:nth-child(2) {
+                            margin: 60px 0 0 20px;
+                        }
+                    }
+                }
+
+                &>div {
+                    height: 250px;
+
+                    &:nth-child(2) {
+                        margin-top: 20px;
+                    }
+                }
             }
 
             &-info {
@@ -789,7 +806,29 @@
 
             &-photo {
                 width: 100%;
-                height: 500px;
+
+
+                &.flex {
+                    justify-content: center;
+
+                    &>div {
+                        height: 400px;
+                        margin-top: 0;
+                        width: unset;
+
+                        &:nth-child(2) {
+                            margin: 60px 0 0 20px;
+                        }
+                    }
+                }
+
+                &>div {
+                    height: 250px;
+
+                    &:nth-child(2) {
+                        margin-top: 20px;
+                    }
+                }
             }
 
             &-info {
@@ -1351,10 +1390,6 @@
         padding: 40px 0;
 
         &_item {
-            &-photo {
-                height: 340px;
-            }
-
             &-title {
                 font-size: 24px;
             }
@@ -1924,13 +1959,26 @@
         padding: 40px 0;
 
         &_item {
+            margin-bottom: 40px;
+
             &-title {
                 margin-bottom: 20px;
             }
 
+            &-info {
+                margin-bottom: 20px;
+            }
 
             &-photo {
-                height: 320px;
+                &.flex {
+                    &>div {
+                        height: unset;
+                    }
+                }
+
+                &>div {
+                    height: unset;
+                }
             }
         }
     }
@@ -2146,9 +2194,7 @@
                 line-height: 1.8;
             }
 
-            &-photo {
-                height: 320px;
-            }
+            &-photo {}
         }
     }
 
