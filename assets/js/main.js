@@ -19,8 +19,10 @@ let mobile_link = document.querySelectorAll('.mobile_buttons-link');
 let logout = document.querySelector('.logout');
 let logout_link = document.querySelectorAll('.logout a');
 
+let movie_link = document.querySelectorAll('.movie_item-link');
+let movie_poster = document.querySelector('.movie_all h6');
 
-// let movie_link = document.querySelectorAll('.movie_item-link');
+let modal_close = document.querySelectorAll('.modal_close');
 
 
 
@@ -145,16 +147,33 @@ if (user_title != undefined) {
     });
 }
 
-// if (movie_link != undefined) {
-//     movie_link.forEach(x => {
-//         x.addEventListener('click', function () {
-//             sleep(2).then(() => {
-//                 console.log("klkl")
-//                 body.classList.add('active');
-//             });
-//         });
-//     })
-// }
+if (movie_link != undefined) {
+    movie_link.forEach(x => {
+        x.addEventListener('click', function () {
+            sleep(2).then(() => {
+                body.classList.add('active');
+            });
+        });
+    })
+}
+
+if (movie_poster != undefined) {
+    movie_poster.addEventListener('click', function () {
+        sleep(2).then(() => {
+            body.classList.add('active');
+        })
+    });
+}
+
+if (modal_close != undefined) {
+    modal_close.forEach(x => {
+        x.addEventListener('click', function () {
+            sleep(2).then(() => {
+                body.classList.remove('active');
+            });
+        });
+    })
+}
 
 
 
