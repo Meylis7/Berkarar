@@ -133,13 +133,14 @@ li {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #DFDFDF;
+    background: #474545;
     border-radius: 10px;
+    @include transition;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #DFDFDF;
+    background: #000000;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {

@@ -4,6 +4,10 @@
 
 .custom-select {
   position: relative;
+
+  &.w150 {
+    width: 150px;
+  }
 }
 
 .select-selected {
@@ -14,30 +18,32 @@
   padding: 12px 40px 12px 20px;
   cursor: pointer;
 
-  background-color: #fff;
+  background-color: #292929;
   border-radius: 4px;
-  border: 1px solid #ced4da;
+  border: 1px solid #292929;
+  color: #fff;
 
   &.select-arrow-active {
     border: 4px 4px 0 0;
 
     &:after {
-      transform: translateY(5px) rotate(225deg);
+      transform: rotate(90deg);
     }
   }
 
   &::after {
     position: absolute;
     content: "";
-    top: 40px;
-    transform: rotate(45deg);
+    top: 17px; 
     right: 20px;
-    width: 8px;
-    height: 8px;
+    width: 15px;
+    height: 15px;
     z-index: 4;
-    border-bottom: 1.5px solid #868686;
-    border-right: 1.5px solid #868686;
+    // border-bottom: 1.5px solid #868686;
+    // border-right: 1.5px solid #868686;
     @include transition;
+    background: url("../images/svg/select-arrow.svg") no-repeat center;
+    background-size: contain;
   }
 }
 
@@ -47,12 +53,16 @@
   left: 0;
   right: 0;
   z-index: 99;
+
   cursor: pointer;
   animation-name: select;
   animation-duration: 0.3s;
-  background: #fff;
+  background: #292929;
+  color: #fff;
 
-  max-height: 500px;
+  text-align: center;
+
+  max-height: 350px;
   overflow-y: auto;
 
   div {
@@ -60,26 +70,21 @@
     font-size: 14px;
     line-height: 1.4;
 
-    color: black;
+    color: #fff;
     padding: 10px;
     cursor: pointer;
     @include transition;
-    background-color: rgba(200,200,200,.5);;
-    border: 1px solid #EDEDED;
     border-radius: 4px;
     margin-bottom: 2px;
 
-    &:last-child {
-      margin-bottom: 30px;
-    }
-
     &:hover {
-      border: 1px solid #EDEDED;
+      // border: 1px solid #EDEDED;
+      background: #fff;
     }
   }
 
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
   }
 
   &::-webkit-scrollbar-track {

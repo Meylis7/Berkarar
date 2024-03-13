@@ -1811,6 +1811,24 @@
     .shops {
         padding: 20px 0 40px;
 
+        &_sort {
+            flex-direction: column;
+
+            .custom-select {
+                width: 100%;
+            }
+        }
+
+        &_search {
+            margin-bottom: 15px;
+            margin-right: 0;
+            width: 100%;
+
+            input {
+                width: calc(100% - 60px);
+            }
+        }
+
         &_tab {
             margin-bottom: 25px;
 
